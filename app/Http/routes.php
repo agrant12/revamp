@@ -19,3 +19,12 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
+
+Route::group(['prefix' => '/admin'], function() {
+	Route::get('/', 'AdminController@index');
+	Route::get('/photography', array('as' => 'admin.photography',  'uses' => 'AdminController@photography'));
+	Route::get('/development', array('as' => 'admin.development',  'uses' => 'AdminController@development'));
+	Route::get('/blog', array('as' => 'admin.blog',  'uses' => 'AdminController@blog'));
+	Route::get('/profile', array('as' => 'admin.profile',  'uses' => 'AdminController@profile'));
+	Route::get('/contact', array('as' => 'admin.contact',  'uses' => 'AdminController@contact'));
+});
