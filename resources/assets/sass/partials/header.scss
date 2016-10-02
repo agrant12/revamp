@@ -1,0 +1,30 @@
+header {
+	position: relative;
+	top: 30px;
+	width: 100%;
+	nav {
+		float: right;
+		a {
+			color: black;
+			font-size: 13px;
+			font-weight: bold;
+			margin: 0 10px 0 0;
+			text-decoration: none;
+			text-transform: uppercase;
+			&:hover, .active {
+				border-bottom: 1px solid #2ec6d7;
+				color: #2ec6d7;
+			}
+		}
+	}
+	.branding {
+		a {
+			color: black;
+			float: left;
+			font-size: 18px;
+			font-weight: 300;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+	}
+}
